@@ -1,0 +1,40 @@
+.contener {
+  width: 100%;
+  margin: 0 8px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 42px;
+
+  .visual {
+    height: 186px;
+    width: 100%;
+    background-color: blue;
+  }
+  .details {
+    background-color: red;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    .avatar {
+      min-width: 70px;
+      .logo {
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        background-color: white;
+        margin: 20px auto;
+      }
+    }
+    .meta {
+      .videoTitle {
+        font-size: 18px;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+      }
+      .metaData {
+        font-size: 16px;
+      }
+    }
+  }
+}

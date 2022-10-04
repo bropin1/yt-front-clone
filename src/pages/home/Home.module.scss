@@ -1,0 +1,57 @@
+.home {
+  //fix scrolling problem with fixed and absolute shit
+  position: relative;
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba($color: #ffffff, $alpha: 0.98);
+    z-index: var(--headerzindex);
+  }
+
+  .sidebar {
+    flex-shrink: 0;
+    position: fixed;
+    width: 72px;
+    height: 100vh;
+    background-color: #ffffff;
+    top: 0;
+    padding-top: 56px;
+    touch-action: pan-y;
+    z-index: var(--sidebarzindex);
+
+    // .fixed {
+    // }
+  }
+
+  .mainBody {
+    flex: 10;
+    min-width: 0;
+    position: relative;
+    margin-top: 56px;
+    margin-left: 72px;
+    display: flex;
+    z-index: var(--mainbodyzindex);
+
+    &:-webkit-scrollbar {
+      background-color: red;
+    }
+    .tagbar {
+      position: fixed;
+      right: 0;
+      height: 56px;
+    }
+
+    .videoContainer {
+      margin-top: 56px;
+      width: 100%;
+      background-color: #f9f9f9;
+
+      .dummy {
+        height: 30vh;
+        border: 1px solid black;
+      }
+    }
+  }
+}

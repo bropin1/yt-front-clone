@@ -1,0 +1,130 @@
+.container {
+  position: relative;
+  min-width: 300px;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20;
+    margin: 0 0 0 40px;
+
+    form {
+      height: 4rem;
+      position: relative;
+      width: 572px;
+      min-width: 0;
+      display: flex;
+      flex-shrink: 1;
+      .iconWrapper {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .searchIcon {
+          display: none;
+          height: 20px;
+          width: 20px;
+          box-sizing: content-box;
+          padding: 0 10px;
+
+          svg {
+            pointer-events: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          &.active {
+            display: inline-flex;
+          }
+        }
+      }
+
+      input {
+        margin-left: 34px;
+        padding: 2px 6px;
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        border-radius: 2px 0px 0px 2px;
+        border: 0.5px solid #c3c3c3;
+        outline-style: none;
+        outline-color: initial;
+        box-shadow: inset 0 0 3px rgba($color: #9696962b, $alpha: 0.1);
+        font-family: roboto;
+        &:focus {
+          border-radius: 2px 0px 0px 2px;
+          border: 1px solid rgb(63, 63, 197);
+          box-shadow: inset 0 0 3px rgba($color: #9696962b, $alpha: 0.6);
+          outline: none;
+        }
+        &.active {
+          margin-left: 0;
+          padding-left: 40px;
+        }
+      }
+    }
+
+    //styling indication box on hover
+    .buttonWrapper {
+      position: relative;
+      display: flex;
+    }
+
+    .buttonIcon {
+      height: 40px;
+      width: 64px;
+      position: relative;
+      border-radius: 0px 2px 2px 0px;
+      border: 0.5px solid #c3c3c3;
+      border-left: none;
+      cursor: pointer;
+
+      .searchIcon {
+        height: 100%;
+        width: 45px;
+        padding: 0 10px;
+        margin: 0 auto;
+
+        svg {
+          pointer-events: none;
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .voiceButton {
+      height: 40px;
+      width: 40px;
+      border: none;
+      border-radius: 50%;
+      margin-left: 8px;
+      padding: 0;
+      flex-shrink: 0;
+
+      .voiceIcon {
+        height: 100%;
+        width: 25px;
+        margin: 0 auto;
+        cursor: pointer;
+
+        svg {
+          pointer-events: none;
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+//flex: flex-grow flex-shrink flex-basics
+//can't animate display property
+//transition property needs to be on the element that has one of its property transitionning

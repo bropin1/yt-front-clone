@@ -1,0 +1,35 @@
+.sideElement {
+  height: 74px;
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgb(209, 209, 209);
+  }
+  a {
+    text-decoration: none;
+    &:visited {
+      color: black;
+    }
+
+    .svgWrapper {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 6px;
+      margin-left: auto;
+      margin-right: auto;
+      svg {
+        pointer-events: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text {
+      line-height: 0.5;
+      font-size: 10px;
+    }
+  }
+}
